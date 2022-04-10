@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/train_ulbi_tv/static/js/main.c93068f4.js",
+    "index.html": "/train_ulbi_tv/index.html",
+    "main.c93068f4.js.map": "/train_ulbi_tv/static/js/main.c93068f4.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c93068f4.js"
+  ]
+}
