@@ -9,14 +9,12 @@ function App() {
         <div className='App'>
             {/*<Counter/>*/}
             {/*<ClassCounter/>*/}
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
+            <PostItem post={{id: 1, title: 'Java Script', body: 'Description'}}/>
+            <PostItem post={{id: 2, title: 'Java Script', body: 'Description'}}/>
+            <PostItem post={{id: 3, title: 'Java Script', body: 'Description'}}/>
+            <PostItem post={{id: 4, title: 'Java Script', body: 'Description'}}/>
+            <PostItem post={{id: 5, title: 'Java Script', body: 'Description'}}/>
+            <PostItem post={{id: 6, title: 'Java Script', body: 'Description'}}/>
         </div>
     );
 }
