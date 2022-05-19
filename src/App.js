@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 // import Counter from "./Components/Counter";
 import './styles/App.css'
 import PostList from "./Components/PostList";
+import MyButton from "./Components/UI/button/MyButton";
+import MyInput from "./Components/UI/input/MyInput";
 
 function App() {
     const [posts, setPosts] = useState([
@@ -11,20 +13,28 @@ function App() {
         {id: 3, title: 'Java Script 3', body: 'Description'},
         {id: 4, title: 'Java Script 4', body: 'Description'},
         {id: 5, title: 'Java Script 5', body: 'Description'}
-    ]);
-    const [posts2, setPosts2] = useState([
-        {id: 1, title: 'Python', body: 'Description'},
-        {id: 2, title: 'Python 2', body: 'Description'},
-        {id: 3, title: 'Python 3', body: 'Description'},
-        {id: 4, title: 'Python 4', body: 'Description'},
-        {id: 5, title: 'Python 5', body: 'Description'}
-    ]);
+    ])
+
+    const [title, setTitle] = useState('')
+
+    const addNewPost = (e) => {
+        e.preventDefault();
+        console.log(title);
+    }
+
     return (
         <div className='App'>
             {/*<Counter/>*/}
             {/*<ClassCounter/>*/}
+            <form>
+                {/*Управляемы компонент*/}
+                <MyInput type='text' placeholder='Название поста' value={title}
+                         onChange={e => setTitle(e.target.value)}/>
+                {/*---*/}
+                <MyInput type='text' placeholder='Описание поста'/>
+                <MyButton onClick={addNewPost}>Создать пост</MyButton>
+            </form>
             <PostList posts={posts} title={'Посты про JS'}/>
-            <PostList posts={posts2} title={'Посты про Python'}/>
         </div>
     );
 }
